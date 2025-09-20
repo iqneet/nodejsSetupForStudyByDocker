@@ -1,9 +1,15 @@
-Usage
+Setup
 ==========
-> Host OS
 
-**Download**
+About
 ----------
+
+
+
+Download
+----------
+
+> Host OS
 ```
 #!/bin/bash
 
@@ -11,8 +17,9 @@ git clone https://github.com/iqneet/nodejsSetupForStudyByDocker.git
 ```
 
 
-Setup
+Usage
 ----------
+
 > Host OS
 ```
 #!/bin/bash
@@ -30,5 +37,5 @@ docker build -t node-docker-app:latest .
 docker run -it --rm -p 3000 -v $(pwd):/app -w /app node-docker-app npm run dev
 
 # step.5
-firefox http://localhost:3000/ 
+firefox http://localhost:3000/
 ```
