@@ -1,0 +1,1 @@
+docker build -t node-docker-app:latest .
