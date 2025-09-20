@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Welcome!</h1>
+  <p id="username"></p>
+  <a href="/Logout">Logout</a>
+
+  <script>
+    // セッション情報はサーバー側で渡すのが安全ですが、
+    // ここでは簡易サンプルとして fetch で /user API を作って取得する例
+    fetch("/user")
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("username").innerText = "ログイン： " + data.username;
+      })
+      .catch(err => console.log(err));
+  </script>
+</body>
+</html>
